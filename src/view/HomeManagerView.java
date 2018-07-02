@@ -31,6 +31,10 @@ public class HomeManagerView extends javax.swing.JFrame {
     public void logout(ActionListener a){
         this.btnLogout.addActionListener(a);
     }
+    
+    public void rekapManger(ActionListener a){
+        this.btnRekapPenjualanManajer.addActionListener(a);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

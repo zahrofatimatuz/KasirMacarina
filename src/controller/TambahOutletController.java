@@ -32,7 +32,6 @@ public class TambahOutletController {
         theView.btnEditListener(new edit());
         this.theView.addAdminList(adminOutlet);
 
-//   
 //   theView.btnPilihListener(new TambahOutletController.pilih());
     }
 

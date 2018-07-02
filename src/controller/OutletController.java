@@ -29,9 +29,9 @@ public class OutletController {
         this.theView = theView;
         om = new OutletModel();
         listOutlet = om.getAllAdmin();
-//        this.theView.kembali(new OutletController.kembali());
+        this.theView.btnKembali(new OutletController.kembali());
         
-//        this.theView.addAdminList(listOutlet);
+        this.theView.addAdminList(listOutlet);
 
     }
 

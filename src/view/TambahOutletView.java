@@ -5,6 +5,7 @@
  */
 package view;
 
+import controller.OutletController;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
