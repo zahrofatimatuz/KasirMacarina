@@ -64,7 +64,7 @@ public class HomeManagerView extends javax.swing.JFrame {
                 btnRekapPenjualanManajerActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRekapPenjualanManajer, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, 290, 50));
+        getContentPane().add(btnRekapPenjualanManajer, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 280, 50));
 
         btnOutlet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnOutlet.png"))); // NOI18N
         btnOutlet.setBorder(null);
@@ -74,7 +74,7 @@ public class HomeManagerView extends javax.swing.JFrame {
                 btnOutletActionPerformed(evt);
             }
         });
-        getContentPane().add(btnOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 290, 50));
+        getContentPane().add(btnOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 280, 50));
 
         btnAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnUser.png"))); // NOI18N
         btnAdmin.setBorder(null);
@@ -84,13 +84,13 @@ public class HomeManagerView extends javax.swing.JFrame {
                 btnAdminActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, 280, 50));
+        getContentPane().add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 490, 280, 50));
 
         btnLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnLogOut.png"))); // NOI18N
         btnLogout.setBorder(null);
         btnLogout.setBorderPainted(false);
         btnLogout.setContentAreaFilled(false);
-        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 550, 290, 50));
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 280, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/HOME.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 750));

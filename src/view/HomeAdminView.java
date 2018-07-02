@@ -56,7 +56,7 @@ public class HomeAdminView extends javax.swing.JFrame {
                 btnRekapPesananActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRekapPesanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 470, 290, 50));
+        getContentPane().add(btnRekapPesanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 470, 290, 50));
 
         btnPesan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnPesanan.png"))); // NOI18N
         btnPesan.setBorder(null);
@@ -66,13 +66,13 @@ public class HomeAdminView extends javax.swing.JFrame {
                 btnPesanActionPerformed(evt);
             }
         });
-        getContentPane().add(btnPesan, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, 310, 40));
+        getContentPane().add(btnPesan, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 310, 40));
 
         btnLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnLogOut.png"))); // NOI18N
         btnLogout.setBorder(null);
         btnLogout.setBorderPainted(false);
         btnLogout.setContentAreaFilled(false);
-        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 520, -1, -1));
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, -1, -1));
         getContentPane().add(Frame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 600));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/HOME.png"))); // NOI18N

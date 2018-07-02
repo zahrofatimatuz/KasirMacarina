@@ -17,7 +17,7 @@ import model.Produk;
  */
 public class PemesananView extends javax.swing.JFrame {
 
-    private Object[] header = {"ID Produk", "Nama Product", "Harga", "qty"};
+    private Object[] header = {"ID Produk", "Nama Produk", "Harga", "Qty"};
     DefaultTableModel tableModel = new DefaultTableModel(null, header);
 
     public PemesananView() {
