@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import model.Outlet;
@@ -13,16 +14,15 @@ import model.Outlet;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author World
  */
 public class RekapPenjualanAdminView extends javax.swing.JFrame {
 
-    private Object[] header = {"No","ID Pesanan", "ID Produk", "Nama Produk", "Qty", "Total Harga"};
+    private Object[] header = {"ID pesanan", "ID Produk", "Nama Produk", "Qty", "Total Harga"};
     DefaultTableModel tableModel = new DefaultTableModel(null, header);
-    
+
     public RekapPenjualanAdminView() {
         initComponents();
     }
@@ -31,18 +31,34 @@ public class RekapPenjualanAdminView extends javax.swing.JFrame {
         return jTabelRekap;
     }
 
-    public void addTableModel(DefaultTableModel model) {
-        jTabelRekap.setModel(model);
-    }
+//    public void addTableModel(DefaultTableModel model) {
+//        jTabelRekap.setModel(model);
+//    }
 
     public void tabelListener(MouseListener m) {
         jTabelRekap.addMouseListener(m);
     }
-    
+
     public String getValueAt(int baris, int kolom) {
         return (String) this.jTabelRekap.getValueAt(baris, kolom);
     }
+
     
+        public void setTabel(DefaultTableModel tabel) {
+        this.jTabelRekap.setModel(tabel);
+    }
+    public int getSelectedRow() {
+        return jTabelRekap.getSelectedRow();
+    }
+
+    public void btnHomeAdmin(boolean status) {
+        this.btnHomeAdmin.setEnabled(status);
+    }
+
+    public void btnHomeAdmin(ActionListener a) {
+        this.btnHomeAdmin.addActionListener(a);
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -60,18 +76,18 @@ public class RekapPenjualanAdminView extends javax.swing.JFrame {
 
         jTabelRekap.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "No", "ID Pesanan", "ID Produk", "Nama Produk", "Qty", "Total Harga"
+                "No", "ID Pesanan", "ID Produk", "Nama Produk", "Qty"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.Double.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -99,8 +115,7 @@ public class RekapPenjualanAdminView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHomeAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeAdminActionPerformed
-    new HomeAdminView().setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_btnHomeAdminActionPerformed
 
     /**

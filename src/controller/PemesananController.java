@@ -12,6 +12,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.ItemTransaksi;
 import model.Produk;
@@ -90,8 +91,12 @@ public class PemesananController {
                 int bayar = Integer.parseInt(theView.getBayar());
                 double total = Double.parseDouble(theView.getTotalBiaya());
                 double kembalian = bayar - total;
-                theView.setKembalian(String.valueOf (kembalian));
-                theModel.saveTransaksi(theView.getNamaPemesan(), list);
+                if (kembalian < 0) {
+                    JOptionPane.showMessageDialog(theView, "uang yang Anda bayarkan kurang " + kembalian);
+                } else {
+                    theView.setKembalian(String.valueOf(kembalian));
+                    theModel.saveTransaksi(theView.getNamaPemesan(), list);
+                }
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
