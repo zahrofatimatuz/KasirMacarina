@@ -34,6 +34,7 @@ public class ManagerController {
         this.theView = theView;
         theView.logout(new logout());
         theView.admin(new admin());
+        theView.outlet(new outlet());
     }
 
     private class logout implements ActionListener {

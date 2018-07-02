@@ -31,7 +31,7 @@ public class OutletController {
         listOutlet = om.getAllAdmin();
         this.theView.btnKembali(new OutletController.kembali());
         
-        this.theView.addAdminList(listOutlet);
+//        this.theView.addAdminList(listOutlet);
 
     }
 

@@ -15,7 +15,7 @@ public abstract class baseModel {
     public connection con;
     
     public baseModel() throws SQLException{
-        this.con = new connection("postgres", "faza16!", "macarina");
+        this.con = new connection("postgres", "franklampard08", "macarina");
     }
     
     public boolean save (String query) throws SQLException{

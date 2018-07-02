@@ -87,6 +87,10 @@ public class PemesananController {
                 list.add(item);
             }
             try {
+                int bayar = Integer.parseInt(theView.getBayar());
+                double total = Double.parseDouble(theView.getTotalBiaya());
+                double kembalian = bayar - total;
+                theView.setKembalian(String.valueOf (kembalian));
                 theModel.saveTransaksi(theView.getNamaPemesan(), list);
             } catch (SQLException ex) {
                 ex.printStackTrace();

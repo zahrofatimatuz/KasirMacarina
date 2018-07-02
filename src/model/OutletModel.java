@@ -21,7 +21,7 @@ public class OutletModel extends baseModel {
 
     public OutletModel() throws SQLException {
         super();
-        this.con = new connection("postgres", "faza16!", "macarina");
+        this.con = new connection("postgres", "franklampard08", "macarina");
         System.out.println("test outlet model");
     }
 

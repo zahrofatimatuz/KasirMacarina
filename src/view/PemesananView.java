@@ -24,11 +24,11 @@ public class PemesananView extends javax.swing.JFrame {
         initComponents();
         tabelTambahPesanan.setModel(tableModel);
     }
-    
+
     public DefaultTableModel getModel() {
         return this.tableModel;
     }
-    
+
     public double getSelectedHarga() {
         return Double.parseDouble(tabelTambahPesanan.getValueAt(getRow(), 2).toString());
     }
@@ -36,7 +36,7 @@ public class PemesananView extends javax.swing.JFrame {
     public double getSelectedQty() {
         return Double.parseDouble(tabelTambahPesanan.getValueAt(getRow(), 3).toString());
     }
-    
+
     public void plusTotal(double tot) {
         double totSkg = Double.parseDouble(txtTotalBiaya.getText());
         double total = totSkg + tot;
@@ -48,16 +48,16 @@ public class PemesananView extends javax.swing.JFrame {
         double total = totSkg - tot;
         txtTotalBiaya.setText(total + "");
     }
-    
-    public int getRow(){
+
+    public int getRow() {
         return tabelTambahPesanan.getSelectedRow();
     }
-    
-    public int getProdukSelected(){
+
+    public int getProdukSelected() {
         return cbxProduk.getSelectedIndex();
     }
-    
-    public int getJumlah(){
+
+    public int getJumlah() {
         return Integer.parseInt(txtJumlah.getText());
     }
 
@@ -92,9 +92,27 @@ public class PemesananView extends javax.swing.JFrame {
     public String getNamaPemesan() {
         return txtNamaPemesan.getText();
     }
+    
+       public String getTotalBiaya() {
+        return txtTotalBiaya.getText();
+    }
 
     public void setNamaPemesan(String isi) {
         this.txtNamaPemesan.setText(isi);
+    }
+  public String getBayar() {
+        return txtBayar.getText();
+    }
+
+    public void setBayar(String isi) {
+        this.txtBayar.setText(isi);
+    }
+    public String getKembalian() {
+        return txtKembalian.getText();
+    }
+
+    public void setKembalian(String isi) {
+        this.txtKembalian.setText(isi);
     }
 
     public void setJumlah(String isi) {
@@ -130,7 +148,7 @@ public class PemesananView extends javax.swing.JFrame {
     public void btnBayarSaveListener(ActionListener a) {
         this.btnBayar.addActionListener(a);
     }
-    
+
     public int getSelectedRow() {
         return tabelTambahPesanan.getSelectedRow();
     }

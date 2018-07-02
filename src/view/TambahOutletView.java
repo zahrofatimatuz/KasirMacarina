@@ -35,9 +35,14 @@ public class TambahOutletView extends javax.swing.JFrame {
         return txtId.getText();
     }
 
+        public void setIdOutlet(String isi) {
+        this.txtId.setText(isi);
+    }
+    
     public String getIdAkun() {
         return txtId.getText();
     }
+    
 
     public String getNamaOutlet() {
         return txtNamaOutlet.getText();
@@ -47,33 +52,41 @@ public class TambahOutletView extends javax.swing.JFrame {
         this.txtNamaOutlet.setText(isi);
     }
 
-    public String getTxtAlamatOutlet() {
+    public String getAlamatOutlet() {
         return txtAlamatOutlet.getText();
     }
 
     public void setAlamatOutlet(String isi) {
         this.txtAlamatOutlet.setText(isi);
     }
-
-    public int getAdminSelected() {
-        return cbxAdminOutlet.getSelectedIndex();
+    
+    public String getAdminOutlet() {
+        return txtAdminOutlet.getText();
     }
 
-    public String getListAdmin() {
-        return (String) cbxAdminOutlet.getSelectedItem();
+    public void setAdminOutlet(String isi) {
+        this.txtAdminOutlet.setText(isi);
     }
 
-    public void setListAdmin(String[] listJenis) {
-        for (String a : listJenis) {
-            this.cbxAdminOutlet.addItem(a);
-        }
-    }
+//    public int getAdminSelected() {
+//        return cbxAdminOutlet.getSelectedIndex();
+//    }
+//
+//    public String getListAdmin() {
+//        return (String) cbxAdminOutlet.getSelectedItem();
+//    }
+//
+//    public void setListAdmin(String[] listJenis) {
+//        for (String a : listJenis) {
+//            this.cbxAdminOutlet.addItem(a);
+//        }
+//    }
 
     public void btnTambah(boolean status) {
         this.btnTambah.setEnabled(status);
     }
 
-    public void tambahOutlet(ActionListener a) {
+    public void btnTambahOutlet(ActionListener a) {
         this.btnTambah.addActionListener(a);
     }
 
@@ -116,15 +129,16 @@ public class TambahOutletView extends javax.swing.JFrame {
     public String getValueAt(int baris, int kolom) {
         return (String) this.tabelOutlet.getValueAt(baris, kolom);
     }
-
-    public void addAdminList(ArrayList<Outlet> listAdmin) {
-        System.out.println("test list Admin");
-        DefaultComboBoxModel<String> mdl = new DefaultComboBoxModel<>();
-        for (int i = 0; i < listAdmin.size(); i++) {
-            mdl.addElement(listAdmin.get(i).getNamaOutlet());
-        }
-        cbxAdminOutlet.setModel(mdl);
-    }
+//String idAdmin = Integer.toString(getid)
+//    public void addAdminList(ArrayList<Outlet> listAdmin) {
+//        String idAdmin = Integer.toString();
+//        System.out.println("test list Admin");
+//        DefaultComboBoxModel<String> mdl = new DefaultComboBoxModel<>();
+//        for (int i = 0; i < listAdmin.size(); i++) {
+//            mdl.addElement(listAdmin.get(i).getIdAmin());
+//        }
+//        cbxAdminOutlet.setModel(mdl);
+//    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -138,9 +152,9 @@ public class TambahOutletView extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tabelOutlet = new javax.swing.JTable();
         Frame = new javax.swing.JLabel();
-        cbxAdminOutlet = new javax.swing.JComboBox<>();
         btnPilih = new javax.swing.JButton();
         txtId = new javax.swing.JLabel();
+        txtAdminOutlet = new javax.swing.JTextField();
         FRAME = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -199,8 +213,6 @@ public class TambahOutletView extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 740, 510));
         getContentPane().add(Frame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 600));
 
-        getContentPane().add(cbxAdminOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 180, -1));
-
         btnPilih.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnPilih.png"))); // NOI18N
         btnPilih.setToolTipText("");
         btnPilih.setBorder(null);
@@ -213,6 +225,7 @@ public class TambahOutletView extends javax.swing.JFrame {
         });
         getContentPane().add(btnPilih, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, -1, -1));
         getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, -1, -1));
+        getContentPane().add(txtAdminOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 180, -1));
 
         FRAME.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OUTLET.png"))); // NOI18N
         getContentPane().add(FRAME, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -229,8 +242,7 @@ public class TambahOutletView extends javax.swing.JFrame {
     }
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
-        new HomeManagerView().setVisible(true);
-        this.dispose();
+     
     }//GEN-LAST:event_btnKembaliActionPerformed
 
     private void btnPilihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPilihActionPerformed
@@ -245,9 +257,9 @@ public class TambahOutletView extends javax.swing.JFrame {
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnPilih;
     private javax.swing.JButton btnTambah;
-    private javax.swing.JComboBox<String> cbxAdminOutlet;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tabelOutlet;
+    private javax.swing.JTextField txtAdminOutlet;
     private javax.swing.JTextField txtAlamatOutlet;
     private javax.swing.JLabel txtId;
     private javax.swing.JTextField txtNamaOutlet;

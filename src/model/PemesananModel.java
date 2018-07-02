@@ -25,7 +25,7 @@ public class PemesananModel extends baseModel {
 
     public PemesananModel() throws SQLException {
         super();
-        this.con = new connection("postgres", "faza16!", "macarina");
+        this.con = new connection("postgres", "franklampard08", "macarina");
         System.out.println("tes");
         //this.username = LoginController.getUserLogin();
 

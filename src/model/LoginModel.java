@@ -19,7 +19,7 @@ public class LoginModel {
     private baseModel base;
 
     public LoginModel() throws SQLException {
-        con = new connection("postgres", "faza16!", "macarina") {
+        con = new connection("postgres", "franklampard08", "macarina") {
             @Override
             public void execute(String sql) throws SQLException {
 

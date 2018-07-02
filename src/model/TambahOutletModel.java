@@ -19,23 +19,23 @@ public class TambahOutletModel extends baseModel {
 
     public TambahOutletModel() throws SQLException {
         super();
-        this.con = new connection("postgres", "faza16!", "macarina");
+        this.con = new connection("postgres", "franklampard08", "macarina");
     }
 
-//    public boolean save(String query) throws SQLException {
-//        String queri = "INSERT INTO outlet( id_outlet, nama_outlet, alamat_outlet, admin_outlet) VALUES ( " + query + " )";
-//        System.out.println(queri);
-//        return super.save(queri);
-//
-//    }
-//        
+    public boolean save(String query) throws SQLException {
+        String queri = "INSERT INTO outlet( id_outlet, nama_outlet, alamat_outlet, id_akun) VALUES ( " + query + " )";
+        System.out.println(queri);
+        return super.save(queri);
+
+    }
+        
     public boolean update(String query) throws SQLException {
         String queri = "update outlet set " + query;
         return super.update(queri);
     }
 
     public DefaultTableModel getTableModel() throws SQLException {
-        Object[] header = {"id_order", "nama outlet", "alamat outlet", "admin"};
+        Object[] header = {"id outlet", "id admin", "nama outlet", "alamat"};
         DefaultTableModel tableModel = new DefaultTableModel(null, header);
 
         String sql = "select * from outlet";
@@ -53,6 +53,21 @@ public class TambahOutletModel extends baseModel {
             tableModel.addRow(kolom);
         }
         return tableModel;
+    }
+
+    public String[] listAdmin() throws SQLException {
+        String query = "SELECT username FROM akun";
+        ResultSet rs = con.getResult(query);
+        rs.last();
+        String admin[] = new String[rs.getRow()];
+        rs.beforeFirst();
+        int a = 0;
+        while (rs.next()) {
+            admin[a] = rs.getString("admin");
+            a++;
+        }
+        a = 0;
+        return admin;
     }
 
 }
