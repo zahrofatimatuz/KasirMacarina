@@ -119,7 +119,6 @@ public class TambahAkunView extends javax.swing.JFrame {
         txtUsername = new javax.swing.JTextField();
         txtAlamat = new javax.swing.JTextField();
         txtId = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         txtLevel = new javax.swing.JTextField();
         FRAME = new javax.swing.JLabel();
 
@@ -130,19 +129,19 @@ public class TambahAkunView extends javax.swing.JFrame {
         btnTambah.setBorder(null);
         btnTambah.setBorderPainted(false);
         btnTambah.setContentAreaFilled(false);
-        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
+        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
 
         btnEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnEdit.png"))); // NOI18N
         btnEdit.setBorder(null);
         btnEdit.setBorderPainted(false);
         btnEdit.setContentAreaFilled(false);
-        getContentPane().add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
+        getContentPane().add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, -1, -1));
 
         btnPilih.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnPilih.png"))); // NOI18N
         btnPilih.setBorder(null);
         btnPilih.setBorderPainted(false);
         btnPilih.setContentAreaFilled(false);
-        getContentPane().add(btnPilih, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, -1, -1));
+        getContentPane().add(btnPilih, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, -1, -1));
 
         btnKembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnKembali.png"))); // NOI18N
         btnKembali.setBorder(null);
@@ -163,15 +162,24 @@ public class TambahAkunView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tabelTambahMenejer);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 500, 320));
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 230, -1));
-        getContentPane().add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 230, -1));
-        getContentPane().add(txtAlamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 230, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 710, 320));
+
+        txtPassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(153, 0, 0));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 240, 30));
+
+        txtUsername.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtUsername.setForeground(new java.awt.Color(153, 0, 0));
+        getContentPane().add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 240, 30));
+
+        txtAlamat.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtAlamat.setForeground(new java.awt.Color(153, 0, 0));
+        getContentPane().add(txtAlamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 240, 30));
         getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 10, 10));
 
-        jLabel1.setText("level");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, -1, -1));
-        getContentPane().add(txtLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 230, -1));
+        txtLevel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtLevel.setForeground(new java.awt.Color(153, 0, 0));
+        getContentPane().add(txtLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 240, 30));
 
         FRAME.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/USER.png"))); // NOI18N
         getContentPane().add(FRAME, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 750));
@@ -223,7 +231,6 @@ public class TambahAkunView extends javax.swing.JFrame {
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnPilih;
     private javax.swing.JButton btnTambah;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabelTambahMenejer;
     private javax.swing.JTextField txtAlamat;

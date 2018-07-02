@@ -58,7 +58,7 @@ public class LoginView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtUsername.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtUsername.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         getContentPane().add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 310, 310, 30));
 
         btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnLogin.png"))); // NOI18N
@@ -68,7 +68,7 @@ public class LoginView extends javax.swing.JFrame {
         btnLogin.setContentAreaFilled(false);
         getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 430, 130, 50));
 
-        txtPassword.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtPassword.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 370, 310, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LOGIN.png"))); // NOI18N

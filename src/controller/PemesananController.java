@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import model.ItemTransaksi;
 import model.Produk;
-import model.ProdukDAO;
+import model.ProdukModel;
 import model.AdminModel;
 import model.ManajerModel;
 import model.PemesananModel;
@@ -32,13 +32,13 @@ public class PemesananController {
     model.PemesananModel theModel;
     view.PemesananView theView;
     String username;
-    ProdukDAO pdao;
+    ProdukModel pdao;
     ArrayList<Produk> listProduk;
 
     PemesananController(PemesananModel theModel, PemesananView theView) throws SQLException, ParseException {
         this.theModel = theModel;
         this.theView = theView;
-        pdao = new ProdukDAO();
+        pdao = new ProdukModel();
         listProduk = pdao.getAllProduk();
         //username = c_login.getUserLogin();
         this.theView.btnKembaliListener(new PemesananController.kembali());

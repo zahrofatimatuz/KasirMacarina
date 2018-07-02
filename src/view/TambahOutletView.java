@@ -170,7 +170,13 @@ public class TambahOutletView extends javax.swing.JFrame {
         btnEdit.setBorderPainted(false);
         btnEdit.setContentAreaFilled(false);
         getContentPane().add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, 120, 50));
+
+        txtNamaOutlet.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtNamaOutlet.setForeground(new java.awt.Color(153, 0, 0));
         getContentPane().add(txtNamaOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 180, -1));
+
+        txtAlamatOutlet.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtAlamatOutlet.setForeground(new java.awt.Color(153, 0, 0));
         getContentPane().add(txtAlamatOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 180, -1));
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);

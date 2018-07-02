@@ -179,11 +179,15 @@ public class PemesananView extends javax.swing.JFrame {
         btnKembali.setBorderPainted(false);
         btnKembali.setContentAreaFilled(false);
         getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 670, -1, -1));
-        getContentPane().add(txtNamaPemesan, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, 160, 30));
+
+        txtNamaPemesan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNamaPemesan.setForeground(new java.awt.Color(153, 0, 0));
+        getContentPane().add(txtNamaPemesan, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 180, 30));
 
         getContentPane().add(cbxProduk, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 220, 30));
 
         txtJumlah.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtJumlah.setForeground(new java.awt.Color(153, 0, 0));
         getContentPane().add(txtJumlah, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 60, 30));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
@@ -216,14 +220,19 @@ public class PemesananView extends javax.swing.JFrame {
         btnHapus.setBorderPainted(false);
         btnHapus.setContentAreaFilled(false);
         getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, -1, 50));
-        getContentPane().add(txtBayar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 470, 160, 30));
+
+        txtBayar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtBayar.setForeground(new java.awt.Color(153, 0, 0));
+        getContentPane().add(txtBayar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 180, 30));
 
         txtTotalBiaya.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtTotalBiaya.setForeground(new java.awt.Color(153, 0, 0));
         txtTotalBiaya.setText("0");
-        getContentPane().add(txtTotalBiaya, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 520, 160, 30));
+        getContentPane().add(txtTotalBiaya, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 510, 180, 30));
 
-        txtKembalian.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        getContentPane().add(txtKembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 560, 160, 50));
+        txtKembalian.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtKembalian.setForeground(new java.awt.Color(153, 0, 0));
+        getContentPane().add(txtKembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 550, 180, 50));
 
         btnBayar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnBayar.png"))); // NOI18N
         btnBayar.setBorder(null);
