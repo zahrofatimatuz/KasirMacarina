@@ -10,15 +10,8 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.LoginModel;
-import model.ManajerModel;
-import model.TambahManajerModel;
-import model.TambahOutletModel;
-import view.LoginView;
-import view.HomeManagerView;
-import view.TambahAkunView;
-import view.TambahOutletView;
-
+import model.*;
+import view.*;
 
 /**
  *
@@ -28,13 +21,17 @@ public class ManagerController {
 
     model.ManajerModel theModel;
     view.HomeManagerView theView;
+//    model.RekapManagerModel Model;
 
     public ManagerController(ManajerModel theModel, HomeManagerView theView) {
         this.theModel = theModel;
         this.theView = theView;
+
         theView.logout(new logout());
         theView.admin(new admin());
         theView.outlet(new outlet());
+        theView.rekapManager (new rekapPenjualanManager());
+
     }
 
     private class logout implements ActionListener {
@@ -72,7 +69,7 @@ public class ManagerController {
 
         }
     }
-    
+
     private class outlet implements ActionListener {
 
         @Override
@@ -91,5 +88,22 @@ public class ManagerController {
 
         }
     }
-    
+//
+    private class rekapPenjualanManager implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                RekapPenjualanManagerView rpm = new RekapPenjualanManagerView();
+                theView.dispose();
+                rpm.setVisible(true);
+                RekapManagerModel Model = new RekapManagerModel();
+                RekapManagerController theController = new RekapManagerController( Model, rpm);
+            } catch (SQLException ex) {
+                Logger.getLogger(ManagerController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+    }
+
 }

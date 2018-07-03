@@ -188,11 +188,11 @@ public class TambahOutletView extends javax.swing.JFrame {
 
         txtNamaOutlet.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtNamaOutlet.setForeground(new java.awt.Color(153, 0, 0));
-        getContentPane().add(txtNamaOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 180, -1));
+        getContentPane().add(txtNamaOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 183, 180, 30));
 
         txtAlamatOutlet.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtAlamatOutlet.setForeground(new java.awt.Color(153, 0, 0));
-        getContentPane().add(txtAlamatOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 180, -1));
+        getContentPane().add(txtAlamatOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 233, 180, 30));
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -225,7 +225,10 @@ public class TambahOutletView extends javax.swing.JFrame {
         });
         getContentPane().add(btnPilih, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, -1, -1));
         getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, -1, -1));
-        getContentPane().add(txtAdminOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 180, -1));
+
+        txtAdminOutlet.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtAdminOutlet.setForeground(new java.awt.Color(153, 0, 0));
+        getContentPane().add(txtAdminOutlet, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 180, 30));
 
         FRAME.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OUTLET.png"))); // NOI18N
         getContentPane().add(FRAME, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

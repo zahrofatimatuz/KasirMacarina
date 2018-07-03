@@ -31,10 +31,6 @@ public class RekapPenjualanAdminView extends javax.swing.JFrame {
         return jTabelRekap;
     }
 
-//    public void addTableModel(DefaultTableModel model) {
-//        jTabelRekap.setModel(model);
-//    }
-
     public void tabelListener(MouseListener m) {
         jTabelRekap.addMouseListener(m);
     }
@@ -43,10 +39,10 @@ public class RekapPenjualanAdminView extends javax.swing.JFrame {
         return (String) this.jTabelRekap.getValueAt(baris, kolom);
     }
 
-    
-        public void setTabel(DefaultTableModel tabel) {
+    public void setTabel(DefaultTableModel tabel) {
         this.jTabelRekap.setModel(tabel);
     }
+
     public int getSelectedRow() {
         return jTabelRekap.getSelectedRow();
     }

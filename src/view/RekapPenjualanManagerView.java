@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -10,30 +11,42 @@ import javax.swing.table.DefaultTableModel;
  */
 public class RekapPenjualanManagerView extends javax.swing.JFrame {
 
-    private Object[] header = {"No","ID Pesanan", "ID Produk", "Nama Produk", "Qty", "Total Harga"};
+    private Object[] header = {"ID Pesanan", "Tanggal Pesanan", "ID Outlet", "ID Produk", "Nama Produk", "Qty","Total Harga"};
     DefaultTableModel tableModel = new DefaultTableModel(null, header);
-    
+
     public RekapPenjualanManagerView() {
         initComponents();
     }
 
-    
     public JTable getTabelRekapnManager(JTable tabelRekapPenjualanManager) {
         return tabelRekapPenjualanManager;
     }
 
-    public void addTableModel(DefaultTableModel model) {
-        tabelRekapPenjualanManager.setModel(model);
+
+    public void setTabel(DefaultTableModel tabel) {
+        this.tabelRekapPenjualanManager.setModel(tabel);
+    }
+
+    public int getSelectedRow() {
+        return tabelRekapPenjualanManager.getSelectedRow();
     }
 
     public void tabelListener(MouseListener m) {
         tabelRekapPenjualanManager.addMouseListener(m);
     }
-    
+
+    public void btnHomeManager(boolean status) {
+        this.btnHomeManager.setEnabled(status);
+    }
+
+    public void btnHomeManager(ActionListener a) {
+        this.btnHomeManager.addActionListener(a);
+    }
+
     public String getValueAt(int baris, int kolom) {
         return (String) this.tabelRekapPenjualanManager.getValueAt(baris, kolom);
     }
-                                  
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -62,18 +75,18 @@ public class RekapPenjualanManagerView extends javax.swing.JFrame {
 
         tabelRekapPenjualanManager.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "No", "No.Outlet", "Nama Kasir", "Total Pembayaran"
+                "No", "No.Outlet", "Nama Kasir", "Total Pembayaran", "Title 5", "Title 6", "Title 7"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -81,8 +94,16 @@ public class RekapPenjualanManagerView extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tabelRekapPenjualanManager);
+        if (tabelRekapPenjualanManager.getColumnModel().getColumnCount() > 0) {
+            tabelRekapPenjualanManager.getColumnModel().getColumn(0).setMinWidth(35);
+            tabelRekapPenjualanManager.getColumnModel().getColumn(0).setPreferredWidth(35);
+            tabelRekapPenjualanManager.getColumnModel().getColumn(0).setMaxWidth(35);
+            tabelRekapPenjualanManager.getColumnModel().getColumn(4).setMinWidth(100);
+            tabelRekapPenjualanManager.getColumnModel().getColumn(4).setPreferredWidth(100);
+            tabelRekapPenjualanManager.getColumnModel().getColumn(4).setMaxWidth(100);
+        }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 720, 350));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 1020, 350));
 
         Frame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/REKAP.png"))); // NOI18N
         getContentPane().add(Frame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 750));
@@ -91,8 +112,7 @@ public class RekapPenjualanManagerView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHomeManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeManagerActionPerformed
- new HomeManagerView().setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_btnHomeManagerActionPerformed
 
     /**

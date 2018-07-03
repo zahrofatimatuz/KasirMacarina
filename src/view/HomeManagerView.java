@@ -32,7 +32,7 @@ public class HomeManagerView extends javax.swing.JFrame {
         this.btnLogout.addActionListener(a);
     }
     
-    public void rekapManger(ActionListener a){
+    public void rekapManager(ActionListener a){
         this.btnRekapPenjualanManajer.addActionListener(a);
     }
 
