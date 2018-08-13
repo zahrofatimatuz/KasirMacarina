@@ -19,7 +19,7 @@ public class TambahOutletModel extends baseModel {
 
     public TambahOutletModel() throws SQLException {
         super();
-        this.con = new connection("postgres", "franklampard08", "macarina");
+        this.con = new connection("postgres", "faza16!", "macarina");
     }
 
     public boolean save(String query) throws SQLException {

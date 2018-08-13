@@ -19,7 +19,7 @@ public class RekapManagerModel {
 
     public RekapManagerModel() throws SQLException {
         super();
-        this.con = new connection("postgres", "franklampard08", "macarina");
+        this.con = new connection("postgres", "faza16!", "macarina");
 
     }
 
